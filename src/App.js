@@ -1,17 +1,14 @@
+import logo from './logo.svg';
 import './App.css';
-import Api from './Api';
 import GitHubApi from './GitHubApi';
-import { useState } from 'react';
-const App = () => {
-  const [cards, setCards] = useState([])
-  let addNewCard = cardInfo => {
-    setCards(cards.concat(cardInfo))
-  }
+import Api from './Api';
+function App() {
   return (
-    <div>
+    <div className="App">
       <Api></Api>
       <GitHubApi></GitHubApi>
     </div>
-  )
+  );
 }
+
 export default App;
